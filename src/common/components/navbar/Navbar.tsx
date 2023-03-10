@@ -29,10 +29,6 @@ export const Navbar: FC<PropsType> = ({ isLoggedIn }) => {
     navigate(PATH.PROFILE)
   }
 
-  const singInBtnHandler = () => {
-    navigate(PATH.LOGIN)
-  }
-
   const errorHandler = () => {
     setIsAvaBroken(true)
     dispatch(setAppErrorAC('Something is wrong with the uploaded image.'))
@@ -59,9 +55,7 @@ export const Navbar: FC<PropsType> = ({ isLoggedIn }) => {
             />
           </div>
         ) : (
-          <button className={s.navBtn} type={'submit'} color={'primary'} onClick={singInBtnHandler}>
-            Sign in
-          </button>
+          <></>
         )}
       </div>
     </div>
